@@ -1,8 +1,8 @@
-#JApiFilter
+# JApiFilter
 
 The purpose of JApiFilter is a simplification of the use of REST for filters by parameters!
 
-##Requirements
+## Requirements
 
    * Spring Boot 2.x
    * Java 8
