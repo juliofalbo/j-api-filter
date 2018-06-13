@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JApiFilterApplication {
+public class JapifilterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JApiFilterApplication.class, args);
+		SpringApplication.run(JapifilterApplication.class, args);
 	}
 }
