@@ -7,16 +7,16 @@ The purpose of JApiFilter is a simplification of the use of REST for filters by 
    * Spring Boot 2.x
    * Java 8
 
-##How to use?
+## How to use?
 
 *First it is important to know that JApiFilter is based on the Spring Data Specification.*
 
-###Now let's go!
+### Now let's go!
 
-#Repository
+# Repository
 The first thing to do is to implement the **[JpaSpecificationExecutor](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaSpecificationExecutor.html)** interface in your repository, so you will have access to the **findAll(Specification <T> spec)** method 
 
-#Builder
+# Builder
 **Using the JApiSpecificationBuilder class is very simple.**
 
 To create a specification based on some entity, simply use the *createFiltersByEntity* method, as in the example below:
@@ -47,7 +47,7 @@ Specification<ProductEntity> specification = SpecificationBuilder.init()
                 .buildSpec();
 ```
 
-#Operations
+# Operations
 Currently available operations are:
 
 * EQUAL
@@ -55,9 +55,9 @@ Currently available operations are:
 * SMALLER
 * LIKE
 
-##Current Version
+## Current Version
 0.1
 
 ___
 
-#####[Júlio Falbo](http://juliofalbo.tech)
+##### [Júlio Falbo](http://juliofalbo.tech)
