@@ -11,12 +11,60 @@ buildscript {
 }
 
 apply plugin: 'java-library'
-apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'com.jfalbo'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allJava
+    classifier 'sources'
+}
+
+task javadocJar(type: Jar) {
+    from javadoc
+    classifier 'javadoc'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId 'japifilter'
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            pom {
+                name = 'JApiFilter'
+                description = 'The purpose of JApiFilter is a simplification of the use of REST for filters by parameters!'
+                url = 'https://github.com/juliofalbo/JApiFilter'
+                licenses {
+                    license {
+                        name = 'MIT License'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'juliofalbo'
+                        name = 'Julio Falbo'
+                        email = 'contato@juliofalbo.tech'
+                    }
+                }
+                scm {
+                    connection = 'https://github.com/juliofalbo/JApiFilter'
+                    developerConnection = 'https://github.com/juliofalbo/JApiFilter'
+                    url = 'https://github.com/juliofalbo/JApiFilter'
+                }
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
 
 repositories {
     mavenCentral()
@@ -26,11 +74,6 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     testCompile('org.springframework.boot:spring-boot-starter-test')
-}
-
-jar {
-    baseName = 'japifilter'
-    version = '0.0.1-SNAPSHOT'
 }
 
 dependencyManagement {
