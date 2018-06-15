@@ -29,7 +29,7 @@ dependencies {
 }
 
 jar {
-    baseName = 'gs-multi-module-library'
+    baseName = 'japifilter'
     version = '0.0.1-SNAPSHOT'
 }
 
