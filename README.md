@@ -23,8 +23,8 @@ To create a specification based on some entity, simply use the *createFiltersByE
 
 Ex:
 ```
-Specification<ProductEntity> specification = SpecificationBuilder.init()
-                .createFiltersByEntity(yourEntity, OperationSpecificationEnum.EQUAL)
+Specification<YourEntity> specification = JApiSpecificationBuilder.init()
+                .createFiltersByEntity(yourEntity, JApiOperationEnum.EQUAL)
                 .buildSpec();
 ```
 
@@ -38,7 +38,7 @@ To create specific filters, the builder provides methods to create filters accor
 
 Ex:
 ```
-Specification<ProductEntity> specification = SpecificationBuilder.init()
+Specification<YourEntity> specification = JApiSpecificationBuilder.init()
                 .withEqualFilter("yourVarName", yourObject)
                 .withBiggerFilter("yourVarName", yourObject)
                 .withSmallerFilter("yourVarName", yourObject)
