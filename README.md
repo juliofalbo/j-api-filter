@@ -10,7 +10,7 @@ The purpose of JApiFilter is a simplification of the use of REST for filters by 
    * Java 8
 
 ## Add in your project
-Use [*JitPack*] (https://jitpack.io/#juliofalbo/j-api-filter/-SNAPSHOT)
+Use [*JitPack*](https://jitpack.io/#juliofalbo/j-api-filter/-SNAPSHOT)
 
 ###  Maven
 
