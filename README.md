@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/juliofalbo/j-api-filter.svg)](https://jitpack.io/#juliofalbo/j-api-filter)
+
 # JApiFilter
 
 The purpose of JApiFilter is a simplification of the use of REST for filters by parameters!
@@ -6,6 +8,45 @@ The purpose of JApiFilter is a simplification of the use of REST for filters by 
 
    * Spring Boot 2.x
    * Java 8
+
+## Add in your project
+Use [*JitPack*] (https://jitpack.io/#juliofalbo/j-api-filter/-SNAPSHOT)
+
+###  Maven
+
+```
+<repositories>
+  <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+  </repository>
+</repositories>
+
+...
+
+<dependency>
+    <groupId>com.github.juliofalbo</groupId>
+    <artifactId>j-api-filter</artifactId>
+    <version>-SNAPSHOT</version>
+</dependency>
+```
+
+### Gradle
+
+```
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+
+...
+
+dependencies {
+      implementation 'com.github.juliofalbo:j-api-filter:-SNAPSHOT'
+}
+```
 
 ## How to use?
 
@@ -60,4 +101,4 @@ Currently available operations are:
 
 ___
 
-##### [Júlio Falbo](http://juliofalbo.tech)
+##### [JÃºlio Falbo](http://juliofalbo.tech)
