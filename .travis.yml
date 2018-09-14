@@ -1,5 +1,6 @@
 language: java
+install: true
 jdk:
- - oraclejdk8
+  - oraclejdk8
 install:
-- ./gradlew build --scan -s
+  - ./gradlew build --scan -s
