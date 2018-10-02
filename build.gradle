@@ -15,8 +15,6 @@ plugins {
 }
 
 apply plugin: 'java-library'
-apply plugin: 'maven-publish'
-apply plugin: 'signing'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'io.github.juliofalbo'
@@ -36,43 +34,6 @@ task javadocJar(type: Jar) {
 buildScan {
     licenseAgreementUrl = "https://gradle.com/terms-of-service"
     licenseAgree = "yes"
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifactId 'japifilter'
-            from components.java
-            artifact sourcesJar
-            artifact javadocJar
-            pom {
-                name = 'JApiFilter'
-                description = 'The purpose of JApiFilter is a simplification of the use of REST for filters by parameters!'
-                url = 'https://github.com/juliofalbo/JApiFilter'
-                licenses {
-                    license {
-                        name = 'MIT License'
-                    }
-                }
-                developers {
-                    developer {
-                        id = 'juliofalbo'
-                        name = 'Julio Falbo'
-                        email = 'contato@juliofalbo.tech'
-                    }
-                }
-                scm {
-                    connection = 'https://github.com/juliofalbo/JApiFilter'
-                    developerConnection = 'https://github.com/juliofalbo/JApiFilter'
-                    url = 'https://github.com/juliofalbo/JApiFilter'
-                }
-            }
-        }
-    }
-}
-
-signing {
-    sign publishing.publications.mavenJava
 }
 
 repositories {
