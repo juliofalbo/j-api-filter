@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/juliofalbo/j-api-filter.svg)](https://jitpack.io/#juliofalbo/j-api-filter)
+[![](https://jitpack.io/v/juliofalbo/j-api-filter.svg)](https://jitpack.io/#juliofalbo/j-api-filter/522db4d90a)
 [![Build Status](https://travis-ci.org/juliofalbo/j-api-filter.svg?branch=master)](https://travis-ci.org/juliofalbo/j-api-filter)
 
 # JApiFilter
