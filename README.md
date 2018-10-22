@@ -28,7 +28,7 @@ Use [*JitPack*](https://jitpack.io/#juliofalbo/j-api-filter/-SNAPSHOT)
 <dependency>
     <groupId>com.github.juliofalbo</groupId>
     <artifactId>j-api-filter</artifactId>
-    <version>-SNAPSHOT</version>
+    <version>522db4d90a</version>
 </dependency>
 ```
 
@@ -45,7 +45,7 @@ allprojects {
 ...
 
 dependencies {
-      implementation 'com.github.juliofalbo:j-api-filter:-SNAPSHOT'
+      compile 'com.github.juliofalbo:j-api-filter:522db4d90a'
 }
 ```
 
