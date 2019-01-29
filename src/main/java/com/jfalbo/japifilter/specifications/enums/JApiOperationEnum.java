@@ -4,6 +4,7 @@ public enum JApiOperationEnum {
     EQUAL("="),
     BIGGER(">"),
     SMALLER("<"),
+    IN("in"),
     LIKE("%");
 
     private String value;

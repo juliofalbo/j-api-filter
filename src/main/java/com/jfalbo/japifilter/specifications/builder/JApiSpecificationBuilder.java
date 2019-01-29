@@ -1,14 +1,15 @@
 package com.jfalbo.japifilter.specifications.builder;
 
-import com.jfalbo.japifilter.specifications.JApiDefaultSpecification;
-import com.jfalbo.japifilter.specifications.domain.JApiFilter;
-import com.jfalbo.japifilter.specifications.enums.JApiOperationEnum;
-import org.springframework.data.jpa.domain.Specification;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
+
+import com.jfalbo.japifilter.specifications.JApiDefaultSpecification;
+import com.jfalbo.japifilter.specifications.domain.FieldIn;
+import com.jfalbo.japifilter.specifications.domain.JApiFilter;
+import com.jfalbo.japifilter.specifications.enums.JApiOperationEnum;
+import org.springframework.data.jpa.domain.Specification;
 
 public class JApiSpecificationBuilder {
 
@@ -35,6 +36,11 @@ public class JApiSpecificationBuilder {
 
     public JApiSpecificationBuilder withLikeFilter(String name, Object value) {
         addFilterIfValueIsNotNull(name, value, JApiOperationEnum.LIKE);
+        return this;
+    }
+
+    public JApiSpecificationBuilder withInFilter(FieldIn inField, Object value) {
+        addFilterIfValueIsNotNull(inField, value, JApiOperationEnum.IN);
         return this;
     }
 
@@ -78,6 +84,13 @@ public class JApiSpecificationBuilder {
     private void addFilterIfValueIsNotNull(String field, Object value, JApiOperationEnum operation) {
         if (value != null) {
             JApiFilter fieldSpec = new JApiFilter(field, value, operation);
+            this.filters.add(fieldSpec);
+        }
+    }
+
+    private void addFilterIfValueIsNotNull(FieldIn fieldIn, Object value, JApiOperationEnum operation) {
+        if (value != null) {
+            JApiFilter fieldSpec = new JApiFilter(fieldIn, value, operation);
             this.filters.add(fieldSpec);
         }
     }

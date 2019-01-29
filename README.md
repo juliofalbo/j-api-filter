@@ -48,6 +48,21 @@ dependencies {
       compile 'com.github.juliofalbo:j-api-filter:522db4d90a'
 }
 ```
+# ExampleMatcher
+
+## How to use?
+
+*This library contains a Builder for facilitate the use of the Interface [ExampleMatcher](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/ExampleMatcher.html).*
+```
+new ExampleBuilder(YourClass.class).
+    .addFilter("yourField", yourObject)
+    .build();
+````
+
+    Note: If you want to use custom ExampleMatcher, you can send your ExampleMatcher object to build method. 
+
+
+# Specification
 
 ## How to use?
 
@@ -76,6 +91,7 @@ To create specific filters, the builder provides methods to create filters accor
 * withBiggerFilter
 * withSmallerFilter
 * withLikeFilter
+* withInFilter
 * withCustomFilter
 
 Ex:
@@ -85,6 +101,7 @@ Specification<YourEntity> specification = JApiSpecificationBuilder.init()
                 .withBiggerFilter("yourVarName", yourObject)
                 .withSmallerFilter("yourVarName", yourObject)
                 .withLikeFilter("yourVarName", yourObject)
+                .withInFilter(new FieldIn("yourFieldList", "attributeName"), yourObject)
                 .withCustomFilter("yourVarName", yourObject, JApiOperationEnum.[yourChoise])
                 .buildSpec();
 ```
@@ -96,9 +113,10 @@ Currently available operations are:
 * BIGGER
 * SMALLER
 * LIKE
+* IN
 
 ## Current Version
-0.1
+0.2
 
 ___
 
