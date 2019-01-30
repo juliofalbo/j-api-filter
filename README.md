@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/juliofalbo/j-api-filter.svg)](https://jitpack.io/#juliofalbo/j-api-filter/522db4d90a)
+[![](https://jitpack.io/v/juliofalbo/j-api-filter.svg)](https://jitpack.io/#juliofalbo/j-api-filter)
 [![Build Status](https://travis-ci.org/juliofalbo/j-api-filter.svg?branch=master)](https://travis-ci.org/juliofalbo/j-api-filter)
 
 # JApiFilter
@@ -28,7 +28,7 @@ Use [*JitPack*](https://jitpack.io/#juliofalbo/j-api-filter/-SNAPSHOT)
 <dependency>
     <groupId>com.github.juliofalbo</groupId>
     <artifactId>j-api-filter</artifactId>
-    <version>522db4d90a</version>
+    <version>9df2da2cc5</version>
 </dependency>
 ```
 
@@ -45,7 +45,7 @@ allprojects {
 ...
 
 dependencies {
-      compile 'com.github.juliofalbo:j-api-filter:522db4d90a'
+      compile 'com.github.juliofalbo:j-api-filter:9df2da2cc5'
 }
 ```
 # ExampleMatcher
